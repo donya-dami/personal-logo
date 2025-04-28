@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Layers of the Earth Logo</title>
+
+  <!-- Import Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #e6f0d9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    svg {
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+</head>
+
+<body>
+    <svg width="400" height="400" viewBox="45 160 120 180" fill="white" opacity="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <a xlink:href="https://www.nasa.gov/image-article/cut-away-diagram-of-earths-interior/" target="_blank">
+          <rect width="400" height="400" x="0" y="0" fill="#b8cfaa"></rect>
+        </a>
+    
+        <title>Layers of the earth (with my initial being the core)</title>
+    
+        <defs>
+          <linearGradient id="gradient1">
+            <stop offset="0%" stop-color="#01b0e9"/>
+            <stop offset="28%" stop-color="#5897fc"/>
+          </linearGradient>
+          
+          <linearGradient id="gradient2">
+            <stop offset="15%" stop-color="#8f331e"/>
+            <stop offset="23%" stop-color="#963924"/>
+          </linearGradient>
+          
+          <linearGradient id="gradient3">
+            <stop offset="15%" stop-color="#ba2818"/>
+            <stop offset="28%" stop-color="#b82d1d"/>
+          </linearGradient>
+          
+          <linearGradient id="hoverGradient">
+            <stop offset="0%" stop-color="#4B0082"/>
+            <stop offset="60%" stop-color="#f9c80e"/>
+          </linearGradient>
+        </defs>
+    
+        <style>
+          <!-- Had to look up how to import Google Font through the css-->
+    
+          #biggestCircle{ 
+            stroke-width: 3px; fill: url("#gradient1"); stroke: #01b0e9; 
+          }
+    
+          #stroke1 { 
+            stroke: #5897fc; 
+          }
+    
+          #secondBiggest {
+            fill: url(#gradient2); stroke-width: 3px; stroke: #8f331e; 
+          }
+    
+          #thirdBiggest {
+            fill: url(#gradient3); stroke: transparent; stroke-width: 3px; 
+          }
+    
+          .whitespace { 
+            fill: #b8cfaa; 
+          }
+    
+          .whitespace:hover {
+            opacity: 65%;
+          }
+    
+          ellipse {
+            fill: grey; 
+          }
+    
+          #biggestEllipse{
+            fill: #0050a9; 
+          }
+    
+          #secondBiggestEllipse {
+            fill: #422c21; 
+          }
+    
+          #thirdBiggestEllipse {
+            fill: #9f1717; 
+          }
+    
+          #earthD {
+            font-family: 'Freckle Face', fantasy;
+            font-size: 2.9em;
+            fill: #e14b00;
+          }
+    
+          #hoverRect {
+            fill: transparent; 
+          }
+    
+          #hoverRect:hover {
+            opacity: 65%; fill: url(#hoverGradient); 
+          }
+    
+          polygon {
+            fill: #06402b;
+            opacity: 100%;
+          }
+    
+          a {
+            pointer-events: auto; 
+          }
+        </style>
+    
+        <!-- Earth Outer 1 -->
+    
+        <a xlink:href="https://www.nasa.gov/image-article/cut-away-diagram-of-earths-interior/" target="_blank">
+          <circle id="biggestCircle" cx="100" cy="250" r="50"></circle>
+        </a>
+    
+        <rect width="60" height="120" x="100" y="190" class="whitespace"></rect>
+    
+        <ellipse id="biggestEllipse" cx="100" cy="250" rx="13" ry="51.5"></ellipse>
+    
+        <!-- Earth Inner 2 -->
+    
+        <circle id="secondBiggest" cx="122" cy="250" r="42"></circle>
+    
+        <rect width="60" height="120" x="122" y="200" class="whitespace"></rect>
+    
+        <ellipse id="secondBiggestEllipse" cx="122" cy="250" rx="13" ry="43.5"></ellipse>
+    
+        <path d="M 85,210 C 80,240 80,260 85,290" fill="transparent" stroke-width="10" id="stroke1"></path>
+    
+        <!-- Land masses -->
+    
+        <polygon points="75,205 60,218 64,270 75,260"/>
+    
+        <polygon points="75,205 85,220 70,255"/>
+    
+        <polygon points="60,218 56,251 63,255"/>
+    
+        <polygon points="60,218 55,225 50.5,236 48.5,248 56,251"/>
+    
+        <polygon points="98.5,301.5 89,290 80,290 78,296.5 90,300.5"/>
+    
+        <polygon points="94.5,297 90.5,285 80,290"/>
+    
+        <!-- Earth Inner 3 -->
+    
+        <a xlink:href="https://i6.cims.nyu.edu/~dd3552/css_me/html_files/index.html" target="_blank">
+          <circle id="thirdBiggest" cx="139" cy="250" r="36"></circle>
+        </a>
+    
+        <path d="M 107.5,220 C 102.5,250 102.5,250 107.5,280" fill="transparent" stroke="#963924" stroke-width="10"></path>
+    
+        <rect width="60" height="120" x="139" y="200" class="whitespace"></rect>
+        
+        <ellipse id="thirdBiggestEllipse" cx="139" cy="250" rx="13" ry="36"></ellipse>
+    
+        <!-- Text -->
+    
+        <text id="earthD" x="134" y="267">D</text>
+    
+        <!-- Hover effect -->
+    
+        <rect width="500" height="500" id="hoverRect"></rect>
+    
+      </svg>
+    
+    </body>
+</html>
